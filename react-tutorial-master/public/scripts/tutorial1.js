@@ -16,7 +16,7 @@ var CommentBox = React.createClass({
   	var comments = this.state.data;
   	var newComments = comments.concat([comment]);
   	this.setState({data: newComments});
-  	
+
     $.ajax({
       url: this.props.url,
       dataType: 'json',
@@ -66,7 +66,6 @@ var CommentList = React.createClass({
 });
 
 var CommentForm = React.createClass({
-	id: 0,
 	handleSubmit: function (e) {
 		e.preventDefault();
 		var author = this.refs.author.value.trim();
